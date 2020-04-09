@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "",
+    "appService.defaultWebAppToDeploy": "/subscriptions/5d39c295-e80b-4ee0-804a-5a560639a7aa/resourceGroups/everyday-shares/providers/Microsoft.Web/sites/everyday-shares"
+}

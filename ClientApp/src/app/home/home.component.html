@@ -1,0 +1,47 @@
+<h1>Placeholder</h1>
+<div>
+  <div class="row align-items-start">
+    <div class="col-2">
+    </div>
+    <div class="col-2">
+      <img src="images/circProf.png" width="160" height="160">
+    </div>
+    <div class="col-4">
+    </div>
+    <div class="col-2">
+      <img src="images/stocks.jpg" width="160" height="160">
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+  <div class="row align-items-center" style="height: 500px;">
+    <div (mouseenter) ="leftVisible = true" (mouseleave) ="leftVisible = false" class="col-2 text-left">
+      <i [style.visibility]="leftVisible ? 'visible' : 'hidden'" class="fa fa-arrow-left fa-4x" aria-hidden="true"></i>
+    </div>
+    <div class="col-2">
+    </div>
+    <div class="col-4">
+      <h1>Title/Description</h1>
+      <p>Product Image will go here</p>
+    </div>
+    <div class="col-2">
+    </div>
+    <div (mouseenter) ="rightVisible = true" (mouseleave) ="rightVisible = false" class="col-2 text-right">
+      <i  [style.visibility]="rightVisible ? 'visible' : 'hidden'" class="fa fa-arrow-right fa-4x" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col-2">
+    </div>
+    <div class="col-2">
+      <img src="images/review.png" width="160" height="60">
+    </div>
+    <div class="col-4">
+    </div>
+    <div class="col-2">
+      <img src="images/message.png" width="160" height="160">
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
