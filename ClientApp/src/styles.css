@@ -14,3 +14,27 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.grid-container {
+  max-width: 1400px;
+}
+
+.main-box-title {
+  text-align: center;
+  width: 100%;
+  height: 25%;
+  border: 5px solid red;
+}
+
+.main-box-description {
+  text-align: center;
+  width: 100%;
+  height: 75%;
+  border: 5px solid black;
+}
+
+.nav-img {
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
