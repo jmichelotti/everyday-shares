@@ -21,15 +21,11 @@ code {
 
 .main-box-title {
   text-align: center;
-  width: 100%;
-  height: 25%;
   border: 5px solid red;
 }
 
 .main-box-description {
   text-align: center;
-  width: 100%;
-  height: 75%;
   border: 5px solid black;
 }
 
@@ -37,4 +33,9 @@ code {
   padding-top: 50px;
   text-align: center;
   padding-bottom: 50px;
+}
+
+.carouselImage {
+  max-height: 500px;
+  width: 100%;
 }

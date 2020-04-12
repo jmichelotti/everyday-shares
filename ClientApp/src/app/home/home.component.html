@@ -17,45 +17,31 @@
   </div>
 
   <div class="row align-items-center">
-    <div (mouseenter)="leftVisible = true" (mouseleave)="leftVisible = false" class="col-1 text-right">
+    <div (mouseenter)="leftVisible = true" (mouseleave)="leftVisible = false" class="col-1 text-right" (click)="prev()">
       <i [style.visibility]="leftVisible ? 'visible' : 'hidden'" class="fa fa-arrow-left fa-4x" aria-hidden="true"></i>
     </div>
     <div class="col-2">
     </div>
-    <div class="col-6" style="height: 400px;">
-      <ngb-carousel *ngIf="images">
-        <ng-template ngbSlide>
+    <div class="col-6">
+      <div>
+        <h3 class="main-box-title">{{titles[imageIndex]}}</h3>
+        <p class="main-box-description">{{descriptions[imageIndex]}}</p>
+      </div>
+      <ngb-carousel *ngIf="images" [interval]="0"  #imgCarousel (slide)="onSlide($event)">
+        <ng-template ngbSlide *ngFor="let img of images; let i = index" [id]="'slideId_' + i">
           <div class="picsum-img-wrapper">
-            <img [src]="images[0]" alt="Random first slide">
+            <img [src]="images[i]" alt="Random first slide" class="carouselImage">
           </div>
           <div class="carousel-caption">
-            <h3>First Product Title</h3>
-            <p>First Product Description</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[1]" alt="Random second slide">
-          </div>
-          <div class="carousel-caption">
-            <h3>Second Product Title</h3>
-            <p>Second Product Description</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[2]" alt="Random third slide">
-          </div>
-          <div class="carousel-caption">
-            <h3>Third Product Title</h3>
-            <p>Third Product Description</p>
+            <h3>Title</h3>
+            <p>Description</p>
           </div>
         </ng-template>
       </ngb-carousel>
     </div>
     <div class="col-2">
     </div>
-    <div (mouseenter)="rightVisible = true" (mouseleave)="rightVisible = false" class="col-1 text-left">
+    <div (mouseenter)="rightVisible = true" (mouseleave)="rightVisible = false" class="col-1 text-left" (click)="next()">
       <i [style.visibility]="rightVisible ? 'visible' : 'hidden'" class="fa fa-arrow-right fa-4x"
         aria-hidden="true"></i>
     </div>
